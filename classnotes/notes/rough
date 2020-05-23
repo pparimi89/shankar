@@ -1,0 +1,34 @@
+class A{
+
+}
+
+class C{
+
+}
+
+class B{
+  C c = new C();
+}
+
+--------------------------
+class ITestInterface{
+
+}
+
+
+
+class A implement ITestInterface{
+
+}
+
+@Component
+class c implement ITestInterface{
+
+}
+
+class B{
+   @Autowired
+   ITestInterface inter;
+}
+
+Inversion of Control: The process of injecting objects by framework
