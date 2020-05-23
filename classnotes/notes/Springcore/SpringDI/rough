@@ -1,14 +1,11 @@
-class A{
+FiatEngine{
 
 }
 
-class C{
-
+class Car{
+  FiatEngine engine;
 }
 
-class B{
-  C c = new C();
-}
 
 --------------------------
 class ITestInterface{

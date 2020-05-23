@@ -4,7 +4,6 @@ JDK 8 or above, intellij, maven 3, postgresql, Git, postman, gitbash command.
 Coursee Structure:
 Spring Core:
     - Dependency Injection
-
     - Bean lifycycle & scopes
     - Aspect oriented programming
     - JDBC

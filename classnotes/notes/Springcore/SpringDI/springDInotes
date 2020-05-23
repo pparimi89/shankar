@@ -1,0 +1,15 @@
+Dependency Injection:
+    FiatEngine{
+
+    }
+
+    class Car{
+      FiatEngine engine;
+    }
+    In the above example the fiatEngine depends on car class and that we call as dependency and The injection is nothing
+    but creating instance for the fiat Engine class.
+
+We will be having
+   - Xml based configuration. - This we are not going to use and dont use it anywhere in your projects
+   - Annotation based Configuration
+   - Java based configuration
