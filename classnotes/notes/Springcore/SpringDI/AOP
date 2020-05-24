@@ -1,0 +1,10 @@
+AOP(Aspect oriented programming):
+   - Aop stands for Aspect oriented programming
+   - AOp is a programming paradigm, it is targeted to increase the seperation of cross cutting concerns.
+   - We can add additional behaviour without modifying the existing code.
+
+Aspect : Class level annotation, this aspect is the entry point of the AOP, AOP supports modularization and aspect is unit of module.
+JoinPoint : The points where our aspects will execute(i.e the list of functions that matches our expression for execution)
+PointCut : its a predicate , its an expression that matches the joinpoints.
+Advice: Under the matched joinpoint the advice will tell how the aspect should get
+         executed(i.e either before the method starts or after the method excution compltes etc...)

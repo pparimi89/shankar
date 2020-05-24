@@ -13,3 +13,20 @@ We will be having
    - Xml based configuration. - This we are not going to use and dont use it anywhere in your projects
    - Annotation based Configuration
    - Java based configuration
+
+Types of DI:
+   - Field Injection
+   - Constructor Injection
+   - Setter injection
+Refere example - DITypesTest.java
+
+
+BeanLifeCycle:
+    Post Construction - IntializationBean
+    bean creation
+    pre destruction - DisposableBean
+
+@PostConstruct
+@PreDestroy
+
+
