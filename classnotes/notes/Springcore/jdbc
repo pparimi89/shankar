@@ -1,0 +1,25 @@
+Jdbc Template:
+   - Removes boiler plate of code.
+   - Opening and closing of connections will be taken care by framework.
+   - it has the capabilities to map bean to a query result
+
+We will create a datasource bean here, the inputs for that bean are
+  - URL
+  - Username
+  - Password
+  - Driver
+
+- JdbcTemplate
+- NamedParameterJDBCTemplate
+
+-- Dependecies --
+     <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-jdbc</artifactId>
+         <version>${spring.version}</version>
+     </dependency>
+     <dependency>
+         <groupId>org.postgresql</groupId>
+         <artifactId>postgresql</artifactId>
+         <version>42.2.9</version>
+     </dependency>
