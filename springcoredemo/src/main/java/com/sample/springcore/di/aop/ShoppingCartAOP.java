@@ -18,6 +18,7 @@ public class ShoppingCartAOP {
         items.add(itemId);
     }
 
+    @LogExecutionTime
     public void addCustomCartItem(int itemId){
         items.add(itemId);
     }
@@ -26,6 +27,7 @@ public class ShoppingCartAOP {
         items.remove(itemId);
     }
 
+    @LogExecutionTime
     public void clearCart(){
         items.clear();
     }
@@ -39,4 +41,12 @@ public class ShoppingCartAOP {
         items.add(5);
         return items;
     }
+
+    public void unrelatedScenario(){
+        throw new IllegalArgumentException("Error from unrelatedScenario");
+    }
+
+
+
+
 }

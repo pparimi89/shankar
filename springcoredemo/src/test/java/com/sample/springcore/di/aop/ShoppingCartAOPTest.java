@@ -1,10 +1,7 @@
 package com.sample.springcore.di.aop;
 
-import com.sample.springcore.di.types.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ShoppingCartAOPTest {
 
@@ -18,10 +15,26 @@ class ShoppingCartAOPTest {
 
         shoppingCart.showAllItems();
         shoppingCart.showAllItemsTEST();
-
-
+        shoppingCart.unrelatedScenario();
 /*        shoppingCart.removeCart(0);
         shoppingCart.clearCart();*/
+    }
+
+    @Test
+    public void testAOPAfterThrowing(){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AOPConfiguration.class);
+        ShoppingCartAOP shoppingCart = context.getBean(ShoppingCartAOP.class);
+        //shoppingCart.unrelatedScenario();
+        shoppingCart.addGiftCardItem(3);
+    }
+
+    @Test
+    public void testAOPAnnotation(){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(AOPConfiguration.class);
+        context.refresh();
+        ShoppingCartAOP shoppingCart = context.getBean(ShoppingCartAOP.class);
+        shoppingCart.addCustomCartItem(3);
     }
 
 }

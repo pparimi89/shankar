@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Component
-@Aspect
+/*@Component
+@Aspect*/
 public class LogTimeAspect {
 
-/*    @Around("execution( * ShoppingCartAOP.*(..) )")*/
+    @Around("@annotation( LogExecutionTime )")
     public void addLogBeforeMethodExecution(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("********Around start*********");
         long cuurentTime = System.currentTimeMillis();

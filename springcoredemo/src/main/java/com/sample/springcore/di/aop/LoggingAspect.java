@@ -1,10 +1,8 @@
 package com.sample.springcore.di.aop;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -27,4 +25,21 @@ public class LoggingAspect {
     public void addLogAfterMethodExecution(JoinPoint joinPoint, Object returnVal){
         System.out.println("returnVal >>>>>> "+returnVal);
     }
+
+    @AfterThrowing(pointcut = "execution( * ShoppingCartAOP.*(..) )", throwing = "error")
+    public void addLogAfterThrowingMethodExecution(JoinPoint joinPoint, Throwable error){
+        System.out.println("error >>>>>> "+error.getMessage()+" --- Trace ");
+        //error.printStackTrace();
+    }
+
+    @Around("@annotation(LogExecutionTime)")
+    public void addLogBeforeMethodExecution(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println("********Around start*********");
+        long cuurentTime = System.currentTimeMillis();
+        Object proceed = proceedingJoinPoint.proceed();
+        long afterExecTime = System.currentTimeMillis();
+        System.out.println("********Around End*********");
+        System.out.println("<<Time of execution>>  "+(afterExecTime - cuurentTime));
+    }
+
 }
