@@ -39,5 +39,8 @@ class CartServiceTest {
         cartService.updateCart(10, 1);
     }
 
+    public void test(){
+        System.out.println("herer");
+    }
 
 }
