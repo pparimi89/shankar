@@ -22,3 +22,39 @@ what is it?
 HQL(Hibernate Query language):
     Here we used to write the SQL like queries against database objects.
     HQL its object oriented version of SQL.
+
+
+-----------------
+Entity : The model that holds the information about the database table mapping.
+Entity:
+  @Entity - This annotation makes the model class as hibernate Entity
+  @Table  -  This annotation will map the database table with model
+  @Id - This refers a primary key to your entity.
+  @Column - This annotation will hold the name of the database column name
+
+
+hibernate.cfg.xml:
+    This file holds the information about the
+           - database driver
+           - username
+           - JDBC URL
+           - password
+           - dielect
+           Will be having all our entity configurations mapped over here.
+
+
+StandardServiceRegistrybuilder - This class has the capabilities to read the configuration xml file.
+MetadataSources - This class has the capabilities to bootstrap the hibernate context.
+SessionFactory - MetadataSources will yeild session factory. This
+Query - It holds the API that can run your actual HQL queries.
+
+
+
+
+
+
+
+
+
+
+
