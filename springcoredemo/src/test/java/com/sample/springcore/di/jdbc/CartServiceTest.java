@@ -40,7 +40,7 @@ class CartServiceTest {
     }
 
     public void test(){
-        System.out.println("herer");
+        System.out.println("herer 23232323");
     }
 
 }
