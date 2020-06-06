@@ -26,4 +26,14 @@ public class CartService {
         jdbcTemplate.update(query, new Object[]{id, itemName, itemQuantity});
     }
 
+    public void deleteCart(Integer id){
+        String query = "delete from cart where id = ?";
+        jdbcTemplate.update(query, new Object[]{id});
+    }
+
+    public void updateCart(Integer itemQuantity, Integer id){
+        String query = "update cart set item_quantity = ? where id = ?";
+        jdbcTemplate.update(query, new Object[]{itemQuantity, id});
+    }
+
 }

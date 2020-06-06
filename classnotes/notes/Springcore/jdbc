@@ -11,6 +11,10 @@ We will create a datasource bean here, the inputs for that bean are
 
 - JdbcTemplate
 - NamedParameterJDBCTemplate
+    - Here we can use named parameters instead of positional params.
+    - the advanatage of using this over jdbc template is, we no need maintain the order of params while constructing them.
+
+
 
 -- Dependecies --
      <dependency>

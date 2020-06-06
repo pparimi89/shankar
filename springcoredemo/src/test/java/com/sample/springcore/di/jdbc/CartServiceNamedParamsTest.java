@@ -1,15 +1,11 @@
 package com.sample.springcore.di.jdbc;
 
-import com.sample.springcore.di.aop.AOPConfiguration;
-import com.sample.springcore.di.aop.ShoppingCartAOP;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CartServiceTest {
+class CartServiceNamedParamsTest {
 
     @Test
     void testAddCart() {
@@ -36,7 +32,7 @@ class CartServiceTest {
     public void testUpdateCart(){
         final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JDBCConfiguration.class);
         final CartService cartService = context.getBean(CartService.class);
-        cartService.updateCart(10, 1);
+        cartService.updateCart(7, 1);
     }
 
 

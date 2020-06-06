@@ -1,0 +1,24 @@
+Hibernate:
+-------------
+what is it?
+---------------
+    Its is an ORM(Object relational mapping) tool for the java language.
+    Object relational mapping
+    ------------------------
+       - Its a programming technique for converting data between incompatible type systems using object oriented programming languages.
+    Here the java and database are two incompatible systems and this ORM helps in converting the data between them.
+    - To map the domain model to relational database, hibernate provides a framework.
+
+    Here in hibernate the database tables will refer to classes in java, and the columns of the particular table will mapped as
+    property(variable) in the model.
+
+    - It does the database calls and relieves the developer from manual handling and object conversion of resultset.
+
+    - To provide the details about mapping between java model and databse tables, we have configuration file and
+    annotations to do these mappings.
+
+    It will be in data access layer.
+
+HQL(Hibernate Query language):
+    Here we used to write the SQL like queries against database objects.
+    HQL its object oriented version of SQL.
