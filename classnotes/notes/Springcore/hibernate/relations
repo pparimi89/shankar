@@ -1,0 +1,20 @@
+1. One to one
+    Employee             Address
+    eid                  aid
+    ename                city
+    esal                 state
+                         beginDate
+                         endData
+    addr_id(foreign key to the address aid)
+
+create table address(aid integer primary key, city varchar, state varchar, begin_date varchar, end_date varchar);
+create table employee(eid integer primary key, ename varchar, esal integer, addr_id integer references address(aid));
+
+select * from address
+select * from employee
+
+2. One to many
+
+3. Many to one
+
+4. Many to many

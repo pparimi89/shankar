@@ -17,7 +17,7 @@ public class Cart {
     private String itemName;
 
     @Column(name="item_quantity")
-    private String itemQuantity;
+    private Integer itemQuantity;
 
     public int getId() {
         return id;
@@ -35,11 +35,11 @@ public class Cart {
         this.itemName = itemName;
     }
 
-    public String getItemQuantity() {
+    public Integer getItemQuantity() {
         return itemQuantity;
     }
 
-    public void setItemQuantity(String itemQuantity) {
+    public void setItemQuantity(Integer itemQuantity) {
         this.itemQuantity = itemQuantity;
     }
 
