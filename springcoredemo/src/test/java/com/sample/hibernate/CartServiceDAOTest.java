@@ -1,8 +1,7 @@
 package com.sample.hibernate;
 
+import com.sample.hibernate.crud.CartServiceDAO;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CartServiceDAOTest {
 

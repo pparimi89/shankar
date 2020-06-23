@@ -9,6 +9,9 @@
         <property name="hibernate.connection.password">admin</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
 
-        <mapping class="com.sample.hibernate.model.Cart"></mapping>
+        <mapping class="com.sample.hibernate.crud.Cart"></mapping>
+        <mapping class="com.sample.hibernate.onetoone.Address"></mapping>
+        <mapping class="com.sample.hibernate.onetoone.Employee"></mapping>
+
     </session-factory>
 </hibernate-configuration>

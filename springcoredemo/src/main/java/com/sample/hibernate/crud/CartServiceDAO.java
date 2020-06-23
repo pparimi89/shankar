@@ -1,6 +1,5 @@
-package com.sample.hibernate;
+package com.sample.hibernate.crud;
 
-import com.sample.hibernate.model.Cart;
 import com.sample.hibernate.util.HibernateFactory;
 import org.hibernate.Session;
 import org.hibernate.query.Query;

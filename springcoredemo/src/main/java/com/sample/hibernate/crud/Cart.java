@@ -1,4 +1,4 @@
-package com.sample.hibernate.model;
+package com.sample.hibernate.crud;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
