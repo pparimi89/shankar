@@ -9,8 +9,11 @@ import java.util.List;
 public class EmployeeDAO {
 
     public List<Employee> getEmployees(){
+        int id = 2;
         Session session = HibernateFactory.getSessionFactory().openSession();
-        Query query = session.createQuery("From Employee");
+        Query query = session.createQuery("From Employee where eid = :empId");
+        System.out.println(id);
+        query.setParameter("empId", id);
         return query.list();
     }
 

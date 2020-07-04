@@ -14,7 +14,23 @@ select * from address
 select * from employee
 
 2. One to many
+customer         account
+id               aid
+name             acct_name
+city             acct_code
+account_id
+
+create table account(aid serial primary key, acct_name varchar, acct_code varchar)
+create table customer(id serial primary key, name varchar, city varchar, account_id integer references account(aid))
 
 3. Many to one
 
 4. Many to many
+
+
+Lazy Fetch:
+   when ever we try to invoke the mapped child entity from the parent, then a query call will go and fetch the data at
+   the time of invocation
+
+Eager Fetch:
+    When we try to access parent entity all the corresponding child will get loaded without invoking particular child entity.
