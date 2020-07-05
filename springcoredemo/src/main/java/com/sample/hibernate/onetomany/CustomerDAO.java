@@ -22,12 +22,24 @@ public class CustomerDAO {
         session.getTransaction().commit();
     }
 
+    public void updateAccount(Account account){
+        Session session = HibernateFactory.getSessionFactory().openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(account);
+        session.getTransaction().commit();
+    }
 
-    public void saveCustomer(Customer customer){
+    public Account getAccount(final Integer id){
+        Session session = HibernateFactory.getSessionFactory().openSession();
+        return session.get(Account.class, id);
+    }
+
+
+/*    public void saveCustomer(Customer customer){
         Session session = HibernateFactory.getSessionFactory().openSession();
         session.beginTransaction();
         session.save(customer);
         session.getTransaction().commit();
-    }
+    }*/
 
 }

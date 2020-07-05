@@ -16,5 +16,11 @@
         <mapping class="com.sample.hibernate.onetomany.Customer"></mapping>
         <mapping class="com.sample.hibernate.onetomany.Account"></mapping>
 
+        <mapping class="com.sample.hibernate.manytoone.Item"></mapping>
+        <mapping class="com.sample.hibernate.manytoone.ShoppingCart"></mapping>
+
+        <mapping class="com.sample.hibernate.manytomany.Emp"></mapping>
+        <mapping class="com.sample.hibernate.manytomany.Meeting"></mapping>
+
     </session-factory>
 </hibernate-configuration>

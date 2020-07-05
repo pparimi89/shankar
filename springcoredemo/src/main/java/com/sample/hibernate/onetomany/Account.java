@@ -19,6 +19,10 @@ public class Account {
     @Column(name="acct_code")
     private String accountCode;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="account_id")
+    private List<Customer> customers;
+
 
     public Integer getAid() {
         return aid;
@@ -44,4 +48,11 @@ public class Account {
         this.accountCode = accountCode;
     }
 
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
+    }
 }
