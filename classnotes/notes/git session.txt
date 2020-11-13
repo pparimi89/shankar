@@ -1,0 +1,55 @@
+Merge or Rebase:
+-----------------
+Merge demo:
+   master - file1
+   we create a beranch - feature
+     we create file2
+
+
+
+           (feature) file2 -|
+           |                |
+(master) file1 - file3------(merged the changes here)
+
+commit fea26e75d757efacec38a4a8a492c701d81d038b (master)
+Author: pradeepq <parimi1230@gmail.com>
+Date:   Fri Nov 13 09:55:17 2020 +0530
+
+    file3
+
+commit e79217987f02cddd59c58ddf4eac4b4280733847
+Author: pradeepq <parimi1230@gmail.com>
+Date:   Fri Nov 13 09:52:04 2020 +0530
+
+    file2
+
+commit bcfd72ceabbecb46fd82c22b39a7409f525f91e9
+Author: pradeepq <parimi1230@gmail.com>
+Date:   Fri Nov 13 09:50:31 2020 +0530
+
+    file1
+
+
+Rebase:
+
+(master) file1 - file3-----(feature) file2
+
+
+
+commit b830cd5c36fd1cc7a716bb707625c92bb135d64f (HEAD -> feature)
+Author: pradeepq <parimi1230@gmail.com>
+Date:   Fri Nov 13 10:08:41 2020 +0530
+
+    file2
+
+commit 34aeb8a0942a84c45acc9469a39a5974a1ea0cd8 (master)
+Author: pradeepq <parimi1230@gmail.com>
+Date:   Fri Nov 13 10:09:22 2020 +0530
+
+    file3
+
+commit c2855586873ca5d837d2175ae6edf7de7044099f
+Author: pradeepq <parimi1230@gmail.com>
+Date:   Fri Nov 13 10:07:43 2020 +0530
+
+    file1
